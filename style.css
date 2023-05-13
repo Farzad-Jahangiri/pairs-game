@@ -1,0 +1,156 @@
+body {/* تنظیمات کلی */
+  background: #82d2e5;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+/*JavaScript pairs Game*//* عنوان‌های صفحه */
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+/* Click any card to begin *//* عنوان کلیک روی یک کارت */
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+/* timer */
+#seconds,
+#tens {
+  font-size: 2em;
+}
+/* Never used */
+button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+  background: #82d2e5;
+  color: #fff;
+  border: solid 1px #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+}
+/* Never used */
+button:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: #fff;
+  border: solid 1px #fff;
+  color: #82d2e5;
+}
+
+#container {/* تنظیمات کارت‌ها */
+  width: 630px;
+  margin: 10px auto;
+}
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style cards */
+[data-view="card"] {
+  transform: rotateY(180deg);
+  width: 100px;
+  height: 140px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(
+      135deg,
+      #f3f3f3 22px,
+      #fff 22px,
+      #fff 24px,
+      transparent 24px,
+      transparent 67px,
+      #fff 67px,
+      #fff 69px,
+      transparent 69px
+    ),
+    linear-gradient(
+        225deg,
+        #f3f3f3 22px,
+        #fff 22px,
+        #fff 24px,
+        transparent 24px,
+        transparent 67px,
+        #fff 67px,
+        #fff 69px,
+        transparent 69px
+      )
+      0 64px;
+  background-color: #f3f3f3;
+  background-size: 64px 128px;
+}
+
+/* Card rotation animation  چ خ */
+.flipped {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+/* Animation on the back of the card پ ش */
+.reverse {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+.correct {
+  opacity: 0.5;
+  cursor: default;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+/* Icons */
+.correct[data-item="sass"],
+.flipped[data-item="sass"] {
+  background: url("./assets/sass.png") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item="gulp"],
+.flipped[data-item="gulp"] {
+  background: url("./assets/gulp.png") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item="grunt"],
+.flipped[data-item="grunt"] {
+  background: url("./assets/grunt.png") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item="git"],
+.flipped[data-item="git"] {
+  background: url("./assets/git.png") left center no-repeat #fff;
+  background-size: contain;
+}
+
+.correct[data-item="css"],
+.flipped[data-item="css"] {
+  background: url("./assets/css.png") left center no-repeat #fff;
+  background-size: contain;
+}
